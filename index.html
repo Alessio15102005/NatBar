@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina con Barra di Ricerca</title>
+    <!-- Collega il file CSS esterno -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Titolo della pagina -->
+    <h1>Benvenuto su MySearch</h1>
+
+    <!-- Menù orizzontale -->
+    <div class="menu">
+        <a href="#">Informazioni</a>
+        <a href="#">Ricerche</a>
+        <a href="#">Altro</a>
+    </div>
+
+    <!-- Barra di ricerca -->
+    <div class="search-container">
+        <form id="searchForm">
+            <div class="search-box">
+                <input type="text" id="searchInput" class="search-input" placeholder="Cerca qualcosa..." required>
+                <button type="submit" class="search-button">Cerca</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Funzione per gestire il submit del form
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impedisce l'invio del form
+
+            const query = document.getElementById('searchInput').value;
+            if (query) {
+                // Qui puoi aggiungere altre logiche, come fare una ricerca su un server o simile
+                // Ad esempio, potresti redirigere l'utente a un'altra pagina:
+                // window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+            }
+        });
+    </script>
+
+</body>
+</html>
